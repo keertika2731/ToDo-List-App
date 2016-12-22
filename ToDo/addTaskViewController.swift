@@ -8,8 +8,9 @@
 
 import UIKit
 
-class addTaskViewController: UIViewController {
-
+class addTaskViewController: UIViewController , UITextFieldDelegate
+{
+    var items:[String] = []
     @IBOutlet weak var addTaskTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +18,32 @@ class addTaskViewController: UIViewController {
         addTaskTextField.underlined()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func saveButton(_ sender: Any)
+    {
+        let itemsObject = UserDefaults.standard.object(forKey: "items")
+        if let tempItems = itemsObject as? [String]
+        {
+            items = tempItems
+            items.append(addTaskTextField.text!)
+   
+        }
+    
+    else
+    {
+    items = [addTaskTextField.text!]
+    }
+       
+        
+        UserDefaults.standard.set(items, forKey: "items")
+        addTaskTextField.text = " saved "
+
     }
     
+         @IBAction func backButton(_ sender: UIBarButtonItem)
+    {
+        self.dismiss(animated: false, completion: nil)
+    }
 
-       
-
+    
+    
 }
