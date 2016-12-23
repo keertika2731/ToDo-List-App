@@ -23,18 +23,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VEA-cW-98X">
-                                <rect key="frame" x="16" y="66" width="343" height="520"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VEA-cW-98X">
+                                <rect key="frame" x="16" y="73" width="343" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="520" id="UWh-kl-GKB"/>
-                                </constraints>
+                                <color key="separatorColor" red="0.28275352720000002" green="0.65693634749999996" blue="0.97027868029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="88" id="Rwm-UP-i40">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="88"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="42" id="Rwm-UP-i40">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwm-UP-i40" id="iIs-hQ-RUu">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -57,15 +55,17 @@
                                     <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDK-PR-FBk"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ee4-PA-3qQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ee4-PA-3qQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items/>
                                 <color key="barTintColor" red="0.28275352720000002" green="0.65693634749999996" blue="0.97027868029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task To Do" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-Mq-z8b">
-                                <rect key="frame" x="16" y="12" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task To Do" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-Mq-z8b">
+                                <rect key="frame" x="16" y="32" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HfM-7m-amu"/>
+                                    <constraint firstAttribute="width" constant="106" id="YIB-XK-VO4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -73,12 +73,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VEA-cW-98X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="70i-zb-vLL"/>
+                            <constraint firstItem="UDy-Mq-z8b" firstAttribute="centerY" secondItem="Ee4-PA-3qQ" secondAttribute="centerY" id="7Ul-nx-kbH"/>
+                            <constraint firstItem="Y4P-M2-1jx" firstAttribute="top" secondItem="VEA-cW-98X" secondAttribute="bottom" constant="1" id="8UQ-z0-o5K"/>
                             <constraint firstItem="Y4P-M2-1jx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DVQ-vq-uTq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y4P-M2-1jx" secondAttribute="bottom" constant="25" id="EeS-yF-Jaq"/>
-                            <constraint firstAttribute="trailing" secondItem="VEA-cW-98X" secondAttribute="trailing" constant="16" id="N1d-tZ-vHp"/>
-                            <constraint firstItem="VEA-cW-98X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="66" id="TBp-pr-npr"/>
-                            <constraint firstItem="Y4P-M2-1jx" firstAttribute="top" secondItem="VEA-cW-98X" secondAttribute="bottom" constant="8" id="qku-dJ-M2G"/>
+                            <constraint firstItem="VEA-cW-98X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KQk-KK-Okz"/>
+                            <constraint firstItem="VEA-cW-98X" firstAttribute="trailing" secondItem="Y4P-M2-1jx" secondAttribute="trailing" id="MF4-YA-wgu"/>
+                            <constraint firstItem="Ee4-PA-3qQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fjt-JF-OEg"/>
+                            <constraint firstItem="UDy-Mq-z8b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="mKe-Lu-ovF"/>
+                            <constraint firstItem="VEA-cW-98X" firstAttribute="centerX" secondItem="Ee4-PA-3qQ" secondAttribute="centerX" id="tqx-1p-F67"/>
+                            <constraint firstItem="VEA-cW-98X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vqG-va-TCk"/>
+                            <constraint firstItem="VEA-cW-98X" firstAttribute="leading" secondItem="UDy-Mq-z8b" secondAttribute="leading" id="xJn-Wu-f54"/>
                         </constraints>
                     </view>
                     <connections>
@@ -87,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="-49"/>
+            <point key="canvasLocation" x="533.60000000000002" y="-49.025487256371818"/>
         </scene>
         <!--Add Task View Controller-->
         <scene sceneID="vhf-kt-gQg">

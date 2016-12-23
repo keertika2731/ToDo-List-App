@@ -24,10 +24,10 @@ class addTaskViewController: UIViewController , UITextFieldDelegate
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker = UIDatePicker()
-        textField.inputView = datePicker
+        dateTextField.inputView = datePicker
         datePicker.datePickerMode = UIDatePickerMode.date
                datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
-        print("This Worked")
+        
     }
     func datePickerChanged(sender: UIDatePicker)
     {dateTextField.text = ""
@@ -35,13 +35,15 @@ class addTaskViewController: UIViewController , UITextFieldDelegate
         formatter.dateStyle = .full
         dateTextField.text = formatter.string(from: sender.date)
         
-        print("Try this at home")
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        addTaskTextField.resignFirstResponder()
         dateTextField.resignFirstResponder()
         return true
     }

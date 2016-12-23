@@ -25,13 +25,14 @@ class ViewController: UIViewController ,UITableViewDataSource , UITableViewDeleg
             items = tempItems
             
         }
-        print (items)
+       // print (items.count)
         table.reloadData()
 
     }
     @IBOutlet weak var table: UITableView!
    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+    
+    return items.count
     }
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -41,6 +42,8 @@ class ViewController: UIViewController ,UITableViewDataSource , UITableViewDeleg
         
         return cell
     }
+    
+    
    
     @IBAction func addButton(_ sender: Any)
     
