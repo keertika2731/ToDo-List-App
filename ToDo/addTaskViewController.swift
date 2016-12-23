@@ -25,6 +25,7 @@ class addTaskViewController: UIViewController , UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker = UIDatePicker()
         textField.inputView = datePicker
+        datePicker.datePickerMode = UIDatePickerMode.date
                datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
         print("This Worked")
     }
@@ -37,6 +38,9 @@ class addTaskViewController: UIViewController , UITextFieldDelegate
         print("Try this at home")
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dateTextField.resignFirstResponder()
         return true
