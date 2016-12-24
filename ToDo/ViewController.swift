@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController ,UITableViewDataSource , UITableViewDelegate
-{
+{var toggleState = 1
     var items : [String] = []
     
     override func viewDidLoad() {
@@ -36,10 +36,12 @@ class ViewController: UIViewController ,UITableViewDataSource , UITableViewDeleg
     }
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-    let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        
-        cell.textLabel?.text = items[indexPath.row]
-        
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+                cell.label.text = items[indexPath.row]
+        //.text = items[indexPath.row]
+       
+cell.checkbox.setBackgroundImage(UIImage(named:"blueBox.png"), for: UIControlState.normal)
+        cell.toggleState = 2
         return cell
     }
     

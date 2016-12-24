@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1187A0A1E0E92B100E3BE45 /* blueBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B1187A091E0E92B100E3BE45 /* blueBox.png */; };
 		B125C90B1E0AE4FC00E0E017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125C90A1E0AE4FC00E0E017 /* AppDelegate.swift */; };
 		B125C90D1E0AE4FC00E0E017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125C90C1E0AE4FC00E0E017 /* ViewController.swift */; };
 		B125C9101E0AE4FC00E0E017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B125C90E1E0AE4FC00E0E017 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 		B16EAD051E0BCDA0005185A9 /* addTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EAD041E0BCDA0005185A9 /* addTaskViewController.swift */; };
 		B16EAD071E0BCED3005185A9 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = B16EAD061E0BCED3005185A9 /* button.png */; };
 		B16EAD091E0BD0BC005185A9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EAD081E0BD0BC005185A9 /* Helpers.swift */; };
+		B18365D21E0DA2CB001B0ED1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18365D11E0DA2CB001B0ED1 /* TableViewCell.swift */; };
+		B1E489001E0EDEA400E6D9F5 /* bluecheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E488FF1E0EDEA400E6D9F5 /* bluecheckbox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1187A091E0E92B100E3BE45 /* blueBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueBox.png; sourceTree = "<group>"; };
 		B125C9071E0AE4FC00E0E017 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B125C90A1E0AE4FC00E0E017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B125C90C1E0AE4FC00E0E017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		B16EAD041E0BCDA0005185A9 /* addTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTaskViewController.swift; sourceTree = "<group>"; };
 		B16EAD061E0BCED3005185A9 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		B16EAD081E0BD0BC005185A9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		B18365D11E0DA2CB001B0ED1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B1E488FF1E0EDEA400E6D9F5 /* bluecheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecheckbox.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +111,13 @@
 			children = (
 				B125C90A1E0AE4FC00E0E017 /* AppDelegate.swift */,
 				B125C90C1E0AE4FC00E0E017 /* ViewController.swift */,
+				B18365D11E0DA2CB001B0ED1 /* TableViewCell.swift */,
 				B16EAD041E0BCDA0005185A9 /* addTaskViewController.swift */,
 				B125C90E1E0AE4FC00E0E017 /* Main.storyboard */,
 				B16EAD081E0BD0BC005185A9 /* Helpers.swift */,
 				B125C9111E0AE4FC00E0E017 /* Assets.xcassets */,
+				B1E488FF1E0EDEA400E6D9F5 /* bluecheckbox.png */,
+				B1187A091E0E92B100E3BE45 /* blueBox.png */,
 				B16EAD061E0BCED3005185A9 /* button.png */,
 				B125C9131E0AE4FC00E0E017 /* LaunchScreen.storyboard */,
 				B125C9161E0AE4FC00E0E017 /* Info.plist */,
@@ -244,6 +253,8 @@
 				B125C9151E0AE4FC00E0E017 /* LaunchScreen.storyboard in Resources */,
 				B16EAD071E0BCED3005185A9 /* button.png in Resources */,
 				B125C9121E0AE4FC00E0E017 /* Assets.xcassets in Resources */,
+				B1187A0A1E0E92B100E3BE45 /* blueBox.png in Resources */,
+				B1E489001E0EDEA400E6D9F5 /* bluecheckbox.png in Resources */,
 				B125C9101E0AE4FC00E0E017 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18365D21E0DA2CB001B0ED1 /* TableViewCell.swift in Sources */,
 				B16EAD051E0BCDA0005185A9 /* addTaskViewController.swift in Sources */,
 				B125C90D1E0AE4FC00E0E017 /* ViewController.swift in Sources */,
 				B125C90B1E0AE4FC00E0E017 /* AppDelegate.swift in Sources */,
